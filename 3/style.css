@@ -1,0 +1,55 @@
+.starRating:not(old){
+	display        : inline-block;
+	width          : 90px;
+	height         : 16px;
+	overflow       : hidden;
+	vertical-align : bottom;
+}
+.starRating:not(old) > input{
+	margin-right : -100%;
+	opacity      : 0;
+}
+.starRating:not(old) > label{
+	display         : block;
+	float           : right;
+	position        : relative;
+	background      : url('img/star.jpg');
+	background-size : contain;
+	margin-right	: 2px;
+}
+.starRating:not(old) > label:before{
+	content         : '';
+	display         : block;
+	width           : 16px;
+	height          : 16px;
+	background      : url('img/star_a.jpg');
+	background-size : contain;
+	opacity         : 0;
+	transition      : opacity 0.2s linear;
+	cursor			: pointer;
+}
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+	opacity : 1;
+}
+button {
+	font: 11px Verdana;
+	color: #000;
+	background: #e4e4e4;
+	background-origin: padding-box, border-box;
+	background-clip: padding-box, border-box;
+	border: 1px solid transparent;
+	border-radius: 7px;
+	text-decoration: none;
+	outline: 0;
+	padding: 2px 17px 3px 18px;
+	background-image: -webkit-linear-gradient(#f2f2f2, #e2e2e2 100%), -webkit-linear-gradient(#E5E5E5, #A8A8A8);
+	background-image:    -moz-linear-gradient(#f2f2f2, #e2e2e2 100%),    -moz-linear-gradient(#E5E5E5, #A8A8A8);
+	background-image:     -ms-linear-gradient(#f2f2f2, #e2e2e2 100%),     -ms-linear-gradient(#E5E5E5, #A8A8A8);
+	background-image:      -o-linear-gradient(#f2f2f2, #e2e2e2 100%),      -o-linear-gradient(#E5E5E5, #A8A8A8);
+	background-image:         linear-gradient(#f2f2f2, #e2e2e2 100%),         linear-gradient(#E5E5E5, #A8A8A8);  
+	display:block;
+	margin-top: 80px;
+	cursor: pointer;
+}

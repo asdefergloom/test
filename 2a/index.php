@@ -19,7 +19,7 @@ $dbBasketDelayItems = CSaleBasket::GetList(
 	),
 	false,
 	false
-	//Array("PRODUCT_ID", "NAME")
+	Array("PRODUCT_ID", "NAME")
 );
 $arUserDelayBasketItems = Array();
 while ($arBasketDelayItems = $dbBasketDelayItems->Fetch())
